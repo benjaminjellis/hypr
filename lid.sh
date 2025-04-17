@@ -5,6 +5,8 @@ if hyprctl monitors | grep -q "DP-4"; then
     hyprctl keyword monitor "eDP-1,preferred,auto,1"
   else
     hyprctl keyword monitor "eDP-1,disable"
+    pidof hyprlock || hyprlock
+    systemctl suspend
   fi
 else
   echo "No monitor"
