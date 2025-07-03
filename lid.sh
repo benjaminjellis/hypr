@@ -1,6 +1,7 @@
 #!/bin/bash
 
-if hyprctl monitors | grep -q "DP-4"; then
+if hyprctl monitors | grep -q "DP-6"; then
+  echo "Found external monitor"
   # found external monitor
   if [[ $1 == "open" ]]; then
     # lid is open
