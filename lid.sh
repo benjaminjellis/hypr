@@ -14,7 +14,6 @@ else
   # did not find external monitor
   if [[ $1 == "close" ]]; then
     # lid is closed
-    pidof hyprlock || hyprlock
     systemctl suspend
   fi
 
