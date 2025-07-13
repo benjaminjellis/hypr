@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if hyprctl monitors | grep -q "DP-6"; then
-  echo "Found external monitor"
+if hyprctl monitors | grep -q "DP-7" || hyprctl monitors | grep -q "DP-6"; then
+
   # found external monitor
   if [[ $1 == "open" ]]; then
     # lid is open
-    hyprctl keyword monitor "eDP-1,preferred,auto,1.2"
+    hyprctl keyword monitor "eDP-1,preferred,auto,1.333"
   else
     # lid is closed
     hyprctl keyword monitor "eDP-1,disable"
